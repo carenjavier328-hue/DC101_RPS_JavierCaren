@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Comic Rock Paper Scissors</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<section id="panel-title" class="panel active">
+<h1 class="comic-title">Rock Paper Scissors</h1>
+<button id="btn-play" class="comic-button">PLAY</button>
+</section>
+
+<section id="panel-rounds" class="panel comic-halftone">
+<h2 class="rounds-title">Choose Number of Rounds</h2>
+<div class="rounds-buttons">
+    <button class="comic-button" data-rounds="1">1</button>
+    <button class="comic-button" data-rounds="3">3</button>
+    <button class="comic-button" data-rounds="5">5</button>
+    <button class="comic-button" data-rounds="10">10</button>
+</div>
+<button id="btn-round-back" class="comic-button back-btn small">Back</button>
+</section>
+
+<section id="panel-gameplay" class="panel comic-halftone">
+<div id="round-indicator" class="round-indicator"></div>
+
+<div class="hands-vs-wrapper">
+    <div class="hand-card">
+    <div class="hand-score">Player: <span id="player-score">0</span></div>
+    <img src="assets/player.png" id="player-hand" class="comic-hand" />
+    </div>
+
+    <div class="vs-text">VS</div>
+
+    <div class="hand-card">
+    <div class="hand-score">Computer: <span id="computer-score">0</span></div>
+    <img src="assets/computer.png" id="computer-hand" class="comic-hand" />
+    </div>
+</div>
+
+<div id="countdown" class="countdown"></div>
+
+<div id="result-text" class="result-tab hidden"></div>
+
+<div class="choices">
+    <img src="assets/rock.png" class="choice" data-choice="rock" />
+    <img src="assets/paper.png" class="choice" data-choice="paper" />
+    <img src="assets/scissors.png" class="choice" data-choice="scissors" />
+</div>
+
+<button id="btn-pause" class="comic-button pause-btn">&#10073;&#10073;</button>
+<div id="pause-menu" class="pause-menu hidden">
+    <button id="btn-resume" class="comic-button">Resume</button>
+    <button id="btn-restart" class="comic-button">Restart</button>
+    <button id="btn-home" class="comic-button">Home</button>
+</div>
+</section>
+
+<section id="panel-result" class="panel comic-halftone">
+<h2 class="result-title">Game Result</h2>
+<p id="final-result-text" class="final-result-text"></p>
+<div class="result-scores">
+    <p>Player Score: <span id="final-player-score">0</span></p>
+    <p>Computer Score: <span id="final-computer-score">0</span></p>
+</div>
+<button id="btn-play-again" class="comic-button">Play Again</button>
+<button id="btn-home-result" class="comic-button small">Home</button>
+</section>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
